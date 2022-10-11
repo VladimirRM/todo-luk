@@ -24,9 +24,10 @@ class App extends React.Component {
     };
   }
   render() {
+    const {tasks} = this.state
     return (
       <div className="App">
-        <h1 className="top">Active tasks: {}</h1>
+        <h1 className="top">Active tasks: {tasks.length}</h1>
       </div>
     );
   }
