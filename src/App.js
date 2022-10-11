@@ -1,4 +1,5 @@
 import React from "react";
+import Task from './components/Task'
 
 class App extends React.Component {
   constructor() {
@@ -28,6 +29,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1 className="top">Active tasks: {tasks.length}</h1>
+        {tasks.map(task=>
+          <Task task={task} key={task.id}></Task>)}
       </div>
     );
   }
